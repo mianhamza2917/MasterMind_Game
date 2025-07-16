@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="game-menu" id="game-menu-1">
+      <div class="game-menu-background">
+        <div class="menu-options">
+          <div class="allow-duplicates">
+            <span>Allow Duplicates</span>
+            <form action="#">
+              <input type="checkbox" id="duplicates" />
+              <label for="duplicates" class="slider"></label>
+            </form>
+          </div>
+          <div class="start-game-background">
+            <button id="start-game">Start Game</button>
+          </div>
+          <div class="rules">
+            <a href="/rules.html">
+              <button>Rules</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="game">
+        <div class="code" id="code">
+          <div>
+            <img src="question.png" alt="" />
+          </div>
+          <div>
+            <img src="question.png" alt="" />
+          </div>
+          <div>
+            <img src="question.png" alt="" />
+          </div>
+          <div>
+            <img src="question.png" alt="" />
+          </div>
+        </div>
+        <div class="code-guess">
+          <div id="guess"></div>
+          <div id="result"></div>
+        </div>
+        <div class="choose-color">
+          <div class="colors">
+            <button class="color red" style="--color: red"></button>
+            <button class="color blue" style="--color: blue"></button>
+            <button class="color green" style="--color: green"></button>
+            <button class="color yellow" style="--color: yellow"></button>
+            <button class="color purple" style="--color: purple"></button>
+            <button class="color orange" style="--color: orange"></button>
+            <button class="color black" style="--color: black"></button>
+            <button class="color white" style="--color: white"></button>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="check">
+            <button id="check-guess">Check</button>
+          </div>
+
+          <div class="start-new-game">
+            <a href="/">
+              <button>Start New Game</button>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Win Celebration -->
+        <div id="win-celebration" class="win-celebration hidden">
+          <div class="celebration-content">
+            <div class="confetti-container" id="confetti"></div>
+            <div class="win-message">
+              <h2 class="win-title">🎉 Congratulations! 🎉</h2>
+              <p class="win-subtitle">You cracked the code!</p>
+              <div class="star-rating" id="star-rating">
+                <!-- Stars will be added here by JavaScript -->
+              </div>
+              <div class="attempts-info">
+                <span id="attempts-text"></span>
+              </div>
+            </div>
+            <div class="celebration-buttons">
+              <button id="play-again" class="play-again-btn">Play Again</button>
+              <button id="share-score" class="share-score-btn">Share Score</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lose Message -->
+        <div id="lose-message" class="lose-message hidden">
+          <div class="lose-content">
+            <h2 class="lose-title">😔 Game Over</h2>
+            <p class="lose-subtitle">Better luck next time!</p>
+            <div class="lose-buttons">
+              <button id="try-again" class="try-again-btn">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
